@@ -87,7 +87,7 @@ const Pokemon = () => {
 
   return (
     <div className={styles.detalleContainer}>
-      <Container component="main" maxWidth="md">
+      <Container maxWidth="md">
         <Grid container spacing={2}>
           {pokemonData && (
             <>

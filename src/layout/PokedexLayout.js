@@ -3,7 +3,7 @@ import { Container } from '@mui/material';
 
 export default function PokedexLayout({ children }) {
   return (
-    <Container component="main" maxWidth="md">
+    <Container  maxWidth="md">
       <div>
         <main>
           <div>{children}</div>

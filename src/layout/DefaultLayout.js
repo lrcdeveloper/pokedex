@@ -4,7 +4,7 @@ const DefaultLayout = ({ children }) => (
 
     <style jsx>{`
       .default-container {
-        padding: 40px 20px;
+        padding: 5px 5px;
         text-align: center;
         max-width: 900px;
         margin: 0 auto;

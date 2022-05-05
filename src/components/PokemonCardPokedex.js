@@ -79,14 +79,14 @@ const PokemonCard = ({ pokemon, pokedexChange = null }) => {
               </div>
               <div className={styles.boxTypes}>
                 <Grid item xs={12} sm={12} md={12}>
-                  <div>{pokemon.firstType}</div>
+                  <div className={styles.boxType}>{pokemon.firstType}</div>
                 </Grid>
               </div>
               <div className={styles.boxMoves}>
                 <Grid container spacing={2}>
                   {pokemon.moves.map((move, index) => (
                     <Grid key={index} item xs={6} sm={6} md={6}>
-                      <div>{move}</div>
+                      <div className={styles.boxMove}>{move}</div>
                     </Grid>
                   ))}
                 </Grid>

@@ -3,9 +3,11 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import styles from '@styles/Header.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 import { setTotalPokedex } from '../actions';
 import { useDispatch } from 'react-redux';
 import PokedexCounter from '@components/PokedexCounter';
+import pokebola from '../assets/pokebola.png'
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -29,13 +31,16 @@ const Header = () => {
               <h1 className={styles.title}>Pokemons</h1>
             </Link>
           </Grid>
-          <Grid item xs={4} className={styles.pokedexLink}>
+          <Grid item xs={6} className={styles.pokedexLink}>
             <Link href="/myPokedex" passHref>
-              <h1 className={styles.title}>Pokedex</h1>
+              <div className={styles.pokedexLinkBtn}>
+                <Image width={36} height={36} src={pokebola} />
+                <PokedexCounter />
+              </div>
             </Link>
+
           </Grid>
           <Grid item xs={2} className={styles.pokedexLink}>
-            <PokedexCounter />
           </Grid>
         </Grid>
       </Container>
