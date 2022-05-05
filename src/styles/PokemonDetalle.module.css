@@ -1,0 +1,83 @@
+.detalleContainer {
+    position: relative;
+    margin-top: 90px;
+}
+
+.boxName {
+  text-align: left;
+}
+.boxName .name{
+  font-family: 'Nunito', sans-serif;
+  font-size: 54px;
+  font-weight: bold
+}
+.boxTypes {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+.boxType {
+  border-radius: 7px;
+  margin-right: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  border: 1px solid #9bcc50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxMoves {
+  margin-top:30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Nunito', sans-serif;
+}
+.boxMove {
+  border-radius: 7px;
+  margin-right: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fd7d24
+}
+.flexStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Nunito', sans-serif;
+}
+.boxAddFavorites {
+  display: flex;
+  align-items: center;
+  justify-content:  flex-end;
+}
+.boxAddFavorites i { 
+  font-size: 30px;
+  cursor: pointer;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(-90deg,#a3278f,#e52f50)
+}
+
+@media (max-width: 968px) {
+  .boxAddFavorites {
+    display: flex;
+    align-items: center;
+    justify-content:  flex-start;
+  }
+}
+  
+@media (max-width: 568px) {
+  .boxName {
+    text-align: center;
+  }
+}

@@ -1,0 +1,25 @@
+.headerContainer {
+  position: fixed;
+  height: 56px;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1px 4px rgba(9, 30, 66, 0.13), 0 8px 16px rgba(9, 30, 66, 0.08);
+  display: flex;
+  z-index: 3000;
+  width: 100%;
+  background-color: #fff;
+}
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'Mark Pro', sans-serif;
+  cursor: pointer;
+}
+.titleIcon {
+  margin-right: 10px;
+}
+.pokedexLink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
