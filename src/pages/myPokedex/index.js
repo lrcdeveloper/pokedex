@@ -77,17 +77,16 @@ const MyPokedex = () => {
         {pokemonsData && pokemonsData.length > 0 && pokemonsData.map((pokemon, index) => <PokemonCardPokedex pokemon={pokemon} key={index} pokedexChange={getMyPokedex} />)}
       </Grid>
       <Grid container spacing={3}>
-        {
-          pokemonsData && pokemonsData.length > 0 &&
-            <Grid item xs={12} className={styles.boxPagination}>
-              <button onClick={previousPage} className={styles.previousBtn}>
-                previous
-              </button>
-              <button onClick={nextPage} className={styles.nextBtn}>
-                Next
-              </button>
-            </Grid>
-        }
+        {pokemonsData && pokemonsData.length > 0 && (
+          <Grid item xs={12} className={styles.boxPagination}>
+            <button onClick={previousPage} className={styles.previousBtn}>
+              previous
+            </button>
+            <button onClick={nextPage} className={styles.nextBtn}>
+              Next
+            </button>
+          </Grid>
+        )}
       </Grid>
     </Container>
   );

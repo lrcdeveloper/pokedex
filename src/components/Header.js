@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { setTotalPokedex } from '../actions';
 import { useDispatch } from 'react-redux';
 import PokedexCounter from '@components/PokedexCounter';
-import pokebola from '../assets/pokebola.png'
+import pokebola from '../assets/pokebola.png';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -38,10 +38,8 @@ const Header = () => {
                 <PokedexCounter />
               </div>
             </Link>
-
           </Grid>
-          <Grid item xs={2} className={styles.pokedexLink}>
-          </Grid>
+          <Grid item xs={2} className={styles.pokedexLink}></Grid>
         </Grid>
       </Container>
     </div>
