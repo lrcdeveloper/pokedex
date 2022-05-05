@@ -11,8 +11,12 @@ module.exports = {
       "plugin:prettier/recommended",
       "next",
       "next/core-web-vitals",
+
     ],
     rules: {
       semi: ["error", "always"],
+      'jsx-a11y/click-events-have-key-events': 'off',
+      'jsx-a11y/no-static-element-interactions': 'off'
+
     },
   };

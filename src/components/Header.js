@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import styles from '@styles/Header.module.css';
@@ -10,38 +10,34 @@ import PokedexCounter from '@components/PokedexCounter';
 const Header = () => {
   const dispatch = useDispatch();
 
-  useEffect(()=> {
+  useEffect(() => {
     let pokedexStorage = JSON.parse(localStorage.getItem('pokedex'));
-    let totalPokemons = 0
-    if(pokedexStorage) {
+    let totalPokemons = 0;
+    if (pokedexStorage) {
       const pokemons = JSON.parse(localStorage.getItem('pokedex'));
-      totalPokemons = pokemons.length; 
+      totalPokemons = pokemons.length;
     }
     dispatch(setTotalPokedex(totalPokemons));
-  })
-  
+  });
+
   return (
     <div className={styles.headerContainer}>
       <Container maxWidth="md">
         <Grid container spacing={2}>
           <Grid item xs={6}>
             <Link href="/" passHref>
-                  <h1 className={styles.title}>
-                    Pokemons
-                  </h1>
-              </Link>
-            </Grid>
-            <Grid item xs={4} className={styles.pokedexLink}>
-            <Link href="/myPokedex" passHref>
-                  <h1 className={styles.title}>
-                    Pokedex
-                  </h1>
-              </Link>
-            </Grid>
-            <Grid item xs={2} className={styles.pokedexLink}>
-              <PokedexCounter />
-            </Grid>
+              <h1 className={styles.title}>Pokemons</h1>
+            </Link>
           </Grid>
+          <Grid item xs={4} className={styles.pokedexLink}>
+            <Link href="/myPokedex" passHref>
+              <h1 className={styles.title}>Pokedex</h1>
+            </Link>
+          </Grid>
+          <Grid item xs={2} className={styles.pokedexLink}>
+            <PokedexCounter />
+          </Grid>
+        </Grid>
       </Container>
     </div>
   );

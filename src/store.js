@@ -1,6 +1,5 @@
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import { createWrapper } from "next-redux-wrapper";
+import { createStore } from 'redux';
+import { createWrapper } from 'next-redux-wrapper';
 import totalReducer from './reducers/totalReducer';
 
 // creating store
